@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e7d32;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.nombre {
+    text-align: center;
+}
+
+.menu button, .opciones button, .carrito button {
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover, .opciones button:hover, .carrito button:hover {
+    background-color: #1b5e20;
+    color: white;
+    border-color: #1b5e20;
+}
+
