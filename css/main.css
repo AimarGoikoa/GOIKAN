@@ -29,6 +29,11 @@ body {
     height: auto;
 }
 
+.galeria div:hover {
+    border: 1px solid #777;
+  }
+  
+
 .pie{
     position:  relative;
     bottom: 0;
