@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -12,6 +11,27 @@ body {
 .cabecera {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #2e7d32;
+    padding: 10px 20px;
+    color: white;
+}
+
+.galeria div {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 350px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+}
+
+.pie{
+    position:  relative;
+    bottom: 0;
     align-items: center;
     background-color: #2e7d32;
     padding: 10px 20px;
@@ -43,4 +63,5 @@ body {
     color: white;
     border-color: #1b5e20;
 }
+
 
