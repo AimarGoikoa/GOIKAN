@@ -17,15 +17,23 @@ body {
     color: white;
 }
 
-.galeria div {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 350px;
+.contenedor-galeria {
+    display: grid;
+    place-items: center;
+    width: 150px;
 }
 
-.galeria img {
-    width: 100%;
+.imagenes div {
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 400px;
+}
+
+.imagenes img {
+    width: 350px;
     height: auto;
 }
 
