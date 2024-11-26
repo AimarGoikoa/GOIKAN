@@ -46,6 +46,7 @@ body {
     position:  relative;
     bottom: 0;
     align-items: center;
+    text-align: center;
     background-color: #2e7d32;
     padding: 10px 20px;
     color: white;
