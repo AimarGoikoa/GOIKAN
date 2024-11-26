@@ -17,33 +17,38 @@ body {
     color: white;
 }
 
-.contenedor-galeria {
-    display: grid;
-    place-items: center;
-    width: 150px;
-}
-
-.imagenes div {
-    margin: 5px;
-    border: 1px solid #ccc;
+.galeria {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    max-width: 400px;
+    justify-content: space-between; 
+    gap: 15px; 
+    padding: 20px;
+}
+
+.imagenes {
+    flex: 1 1 calc(33.33% - 15px);
+    box-sizing: border-box; 
+    border: 2px solid #ccc;
 }
 
 .imagenes img {
-    width: 350px;
+    width: 100%;
     height: auto;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
 }
 
-.galeria div:hover {
-    border: 1px solid #777;
+div.desc {
+    padding: 15px;
+    text-align: center;
   }
-  
 
-.pie{
-    position:  relative;
+.imagenes img:hover {
+    border: 1px solid #777;
+}
+
+.pie {
+    position: relative;
     bottom: 0;
     align-items: center;
     background-color: #2e7d32;
@@ -77,4 +82,18 @@ body {
     border-color: #1b5e20;
 }
 
+.menu a:link, .opciones a:link, .carrito a:link{
+    text-decoration: none;
+}
 
+.menu a:visited, .opciones a:visited, .carrito a:visited{
+    color: black;
+}
+
+.menu a:hover, .opciones a:hover, .carrito a:hover{
+    text-decoration: none;
+}
+
+.menu a:active, .opciones a:active, .carrito a:active{
+    text-decoration: black;
+}
