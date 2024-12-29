@@ -1,5 +1,5 @@
 <?php
-include "cabecera.php";
+include "cabecera.php"
 ?>
 <style>
     body {
@@ -102,54 +102,80 @@ include "cabecera.php";
 
     .log img {
         max-width: 350px;
-        /* Ajusta el tamaño máximo del logo */
+        
         max-height: 350px;
-        /* Ajusta el tamaño máximo del logo */
+       
         width: auto;
         height: auto;
     }
-</style>
 
+    .registro {
+    display: block; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #2e7d32; 
+    }
+
+    
+</style>
 <div class="container">
     <div class="image-section">
         <p><img src="./imagenes/localDenda.jpg" alt="imagen local">
-            <img src="./imagenes/local.jpg" alt="imagen pizza">
             <img src="./imagenes/pizzaHorno3.jpg" alt="imagen pizza">
+            <img src="./imagenes/local.jpg" alt="imagen pizza">
         </p>
     </div>
     <div class="form-section">
-        <h2>Inicio de Sesión</h2>
-        <div class="form-group">
-            <label for="username">Nombre de Usuario</label>
-            <input type="text" id="username" name="username" placeholder="Nombre de Usuario">
-        </div>
-        <label for="recuerdame">Recordar usuario</label>
-        <input type="checkbox" id="recuerdame" name="recuerdame" /><br /><br />
-        <div class="form-group">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" placeholder="Contraseña">
-        </div>
-        <label for="recordar">Recordar contraseña</label>
-        <input type="checkbox" id="recordar" name="recordar" /><br /><br />
+        <span class="registro"><strong>Nuevo Registro</strong> </span> <br />
 
-        <button class="btn">Inicio de Sesión</button><br /><br />
-        <button class="btn"> <a href="registro.php">¿No tienes cuenta? Registrate</a></button>
-        <br />
-        <br />
-        <div class="log">
-            <a href="index.php"><img src="imagenes/goikan logo.png"></a>
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="full-name">Nombre Completo</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Nombre Completo">
+            </div>
+            <div class="form-group">
+                <label for="nuevo_usuario">Nombre Usuario</label>
+                <input type="text" id="nuevo_usuario" name="nuevo_usuario" placeholder="Nombre Usuario">
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" placeholder="DNI">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Repetir Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Repetir Contraseña">
+            </div>
+            <button type="submit" class="btn">Registrar</button>
+
     </div>
+    </form>
     <div class="image-section">
         <p>
-
-            <img src="./imagenes/pizzaHorno.jpg" alt="imagen pizza">
             <img src="./imagenes/pizzaLibre.jpg" alt="imagen pizza">
-            <img src="./imagenes/pizza.jpg" alt="imagen pizza">
-
+            <img src="./imagenes/pizzaHorno.jpg" alt="imagen pizza">
+            <img src="./imagenes/local2.jpg" alt="imagen pizza">
         </p>
     </div>
 </div>
+
 <?php
-include "pie.php";
+include "pie.php"
 ?>
