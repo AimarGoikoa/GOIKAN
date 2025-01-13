@@ -17,7 +17,7 @@
             <button><a href="nachos.php">NACHOS</a></button>
         </nav>
         <div class="opciones">
-            <button><a href="login.php">INICIO DE SESIÓN/REGISTRO</a></button>
+            <button><a href="index.php?page=login.php">INICIO DE SESIÓN/REGISTRO</a></button>
             <button><a href="config.php">CONFIGURACIÓN</a></button>
         </div>
         <div class="carrito">

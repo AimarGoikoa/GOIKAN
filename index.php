@@ -1,5 +1,13 @@
 <?php
 include "cabecera.php";
+
+echo print_r($_GET);
+
+if ($_GET["page"] == "login.php") {
+  
+  include "./login.php";
+}
+
 ?>
 
     <div class="galeria">
