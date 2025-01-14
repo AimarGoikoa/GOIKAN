@@ -1,62 +1,47 @@
 <?php
-include "cabecera.php";
-
 echo print_r($_GET);
 
-if ($_GET["page"] == "login.php") {
-  
-  include "./login.php";
+IF (empty($_GET)) {
+  include "vista_index.php";
 }
 
-?>
+if (isset($_GET["page"])) {
 
-    <div class="galeria">
+  if ($_GET["page"] == "login.php") {
 
-    <div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
+    include "./login.php";
+  
+  } elseif ($_GET["page"] == "config.php") {
+  
+    include "config.php";
+  
+  } elseif ($_GET["page"] == "pizzas.php") {
+  
+    include "pizzas.php";
+  
+  } elseif ($_GET["page"] == "nachos.php") {
+  
+    include "nachos.php";
+  
+  } elseif ($_GET["page"] == "resumen.php") {
+  
+    include "resumen.php";
+  
+  } elseif ($_GET["page"] == "resenas.php") {
+  
+    include "resenas.php";
+  
+  } elseif ($_GET["page"] == "contacto.php") {
+  
+    include "contacto.php";
+  
+  } elseif ($_GET["page"] == "alergenos") {
+  
+    echo "<a href=https://www.lapiazzapizzeria.es/wp-content/uploads/2023/09/carta-alergenos-es.pdf></a>";
+  
+  }
 
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
+}
 
 
-    </div>
 
-<?php
-include "pie.php"
-?>
