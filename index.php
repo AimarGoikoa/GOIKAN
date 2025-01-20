@@ -31,11 +31,7 @@ if (isset($_GET["page"])) {
   
     include "contacto.php";
   
-  } elseif ($_GET["page"] == "alergenos") {
-  
-    echo "<a href=https://www.lapiazzapizzeria.es/wp-content/uploads/2023/09/carta-alergenos-es.pdf></a>";
-  
-  } 
+  }
 
 } else {
   include "vista_index.php";
