@@ -1,7 +1,7 @@
 <footer class="cabecera">
 
     <div class="menu">
-        <button><a href="index.php?page=alergenos"> Lista de alergenos</a></button>
+        <button><a href="https://www.lapiazzapizzeria.es/wp-content/uploads/2023/09/carta-alergenos-es.pdf"> Lista de alergenos</a></button>
         <button><a href="index.php?page=resenas.php">Valoraciones</a></button>
     </div>
     <div class="carrito">
