@@ -1,9 +1,5 @@
 <?php
-echo print_r($_GET);
 
-IF (empty($_GET)) {
-  include "vista_index.php";
-}
 
 if (isset($_GET["page"])) {
 
@@ -39,8 +35,10 @@ if (isset($_GET["page"])) {
   
     echo "<a href=https://www.lapiazzapizzeria.es/wp-content/uploads/2023/09/carta-alergenos-es.pdf></a>";
   
-  }
+  } 
 
+} else {
+  include "vista_index.php";
 }
 
 
