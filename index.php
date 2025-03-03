@@ -43,7 +43,15 @@ if (isset($_GET["page"])) {
   
     include "contacto.php";
   
-  }
+  } 
+  elseif ($_GET["page"] == "logout.php") {
+    // Cerrar sesión (asegúrate de tener un logout.php)
+    include "logout.php";
+
+} else {
+    // Si el valor de page no coincide con nada anterior
+    echo "Página desconocida...";
+}
 
 } else {
   include "vista_index.php";
