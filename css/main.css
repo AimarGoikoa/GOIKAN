@@ -1,99 +1,96 @@
-* {
+/* =============================
+   RESET BÁSICO
+   ============================= */
+   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f4;
-}
-
-.cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2e7d32;
-    padding: 10px 20px;
-    color: white;
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    gap: 15px; 
-    padding: 20px;
-}
-
-.imagenes {
-    flex: 1 1 calc(33.33% - 15px);
-    box-sizing: border-box; 
-    border: 2px solid #ccc;
-}
-
-.imagenes img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
   }
-
-.imagenes img:hover {
-    border: 1px solid #777;
-}
-
-.pie {
-    position: relative;
-    bottom: 0;
-    align-items: center;
-    background-color: #2e7d32;
+  
+  body {
+    background-color: #ccc; /* Color de fondo general */
+  }
+  
+  /* =============================
+     CABECERA Y FOOTER
+     ============================= */
+  /* Como usas la misma clase 'cabecera' en <header> y <footer>,
+     ambos tendrán el mismo color y layout (flex). */
+  .cabecera {
+    display: flex;
+    align-items: center;         /* Centra verticalmente */
+    justify-content: space-between; /* Separar elementos a izquierda y derecha */
+    background-color: #2e7d32;   /* Verde principal */
     padding: 10px 20px;
-    color: white;
-}
-
-.logo img {
-    width: 60px;
-    height: 60px;
-}
-
-.nombre {
-    text-align: center;
-}
-
-.menu button, .opciones button, .carrito button {
-    background-color: white;
+  }
+  
+  /* Para el logo */
+  .cabecera .logo img {
+    height: 50px;
+  }
+  
+  /* 
+     Divs internos: .menu, .opciones y .carrito 
+     también son flex para poner botones en fila 
+  */
+  .cabecera .menu,
+  .cabecera .opciones,
+  .cabecera .carrito {
+    display: flex;
+    gap: 10px; /* espacio horizontal entre botones o textos */
+    align-items: center; 
+  }
+  
+  /* =============================
+     BOTONES DENTRO DE LA CABECERA
+     ============================= */
+  .cabecera button {
+    background-color: #fff;
     color: #2e7d32;
     border: 2px solid #2e7d32;
     border-radius: 5px;
     padding: 5px 10px;
-    margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
-}
-
-.menu button:hover, .opciones button:hover, .carrito button:hover {
-    background-color: #1b5e20;
-    color: white;
-    border-color: #1b5e20;
-}
-
-.menu a:link, .opciones a:link, .carrito a:link{
-    text-decoration: none;
-}
-
-.menu a:visited, .opciones a:visited, .carrito a:visited{
-    color: black;
-}
-
-.menu a:hover, .opciones a:hover, .carrito a:hover{
-    text-decoration: none;
-}
-
-.menu a:active, .opciones a:active, .carrito a:active{
-    text-decoration: black;
-}
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .cabecera button {
+    background-color: #fff;      /* Botón blanco */
+    color: #2e7d32;             /* Texto verde */
+    border: 2px solid #2e7d32;  
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;   /* Suaviza los cambios */
+  }
+  
+  .cabecera button:hover {
+    background-color: #66bb6a;   /* Verde claro */
+    color: #fff;                 /* Texto blanco */
+    border-color: #66bb6a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sutil sombra */
+  }
+  
+  
+  /* Con hover, el texto también cambia de color (debido a color: inherit) */
+  
+  /* =============================
+     MAIN (Contenido principal)
+     ============================= */
+  main {
+    min-height: 60vh; /* Altura mínima, ajusta a tu gusto */
+    padding: 20px;
+  }
+  
+  /* =============================
+     TEXTO DEL FOOTER 
+     (si quieres un estilo distinto para <p> en footer)
+     ============================= */
+  .cabecera p {
+    color: #fff;
+    margin: 0; /* Quita margen por defecto */
+  }
+  
