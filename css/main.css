@@ -94,4 +94,42 @@
     margin: 0; /* Quita margen por defecto */
   }
   
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 20px; /* Espaciado entre imágenes */
+    padding: 20px;
+    justify-content: center; /* Centra la galería */
+}
+
+.imagenes {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.imagenes:hover {
+    transform: scale(1.05);
+}
+
+.desc {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.precio {
+    font-size: 16px;
+    color: #2e7d32; 
+    margin-top: 5px;
+}
   

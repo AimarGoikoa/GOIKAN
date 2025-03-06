@@ -29,7 +29,7 @@ if (empty($pizzas)) {
         echo '<div class="imagenes">
                 <img src="' . htmlspecialchars($pizza['image_url']) . '" alt="' . htmlspecialchars($pizza['post_title']) . '" width="350" height="200">
                 <div class="desc">' . htmlspecialchars($pizza['post_title']) . '</div>
-                <div class="precio">Precio: 22 </div>
+                <div class="precio">Precio: '.$pizza['price'].' </div>
               </div>';
     }
     echo '</div>';

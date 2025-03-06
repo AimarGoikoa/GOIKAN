@@ -1,8 +1,8 @@
 <?php
 session_start(); // Manejo de sesión (carrito, login, etc.)
-$bdConexion = "localhost:3307";
+$bdConexion = "localhost";
 $username = "root";
-$passwd = "1234";
+$passwd = "";
 $baseDatos = "bdgoikan";
 
 try {
@@ -11,6 +11,6 @@ try {
     $mensaje = "conexion exitosa";
 } catch (\Throwable $th) {
     $error = "Error: $th";
-    include "error.php";
+    echo "$error";
 }
 ?>
