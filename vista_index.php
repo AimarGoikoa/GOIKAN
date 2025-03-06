@@ -1,54 +1,39 @@
 <?php
 include "cabecera.php";
-?>
+require_once "database/database.php"; // Asegurar conexión con la BD
 
-    <div class="galeria">
+// Consulta para obtener las pizzas con sus imágenes y precios
+$sql = "SELECT p.ID, p.post_title, img.guid AS image_url, pm.meta_value AS price
+        FROM wp_posts p 
+        JOIN wp_postmeta pm ON p.ID = pm.post_id 
+        JOIN wp_posts img ON pm.meta_value = img.ID
+        WHERE p.post_type = 'product' AND pm.meta_key = '_thumbnail_id'";
 
-    <div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
+$resul = mysqli_query($conexion, $sql);
 
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
+if (!$resul) {
+    echo "<p>Error en consulta: " . mysqli_error($conexion) . "</p>";
+} else {
+    $pizzas = array();
+    while ($fila = mysqli_fetch_assoc($resul)) {
+        $pizzas[] = $fila;
+    }
+}
 
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
+// Verificar si hay pizzas
+if (empty($pizzas)) {
+    echo "<p>No se encontraron pizzas en la base de datos.</p>";
+} else {
+    echo '<div class="galeria">';
+    foreach ($pizzas as $pizza) {
+        echo '<div class="imagenes">
+                <img src="' . htmlspecialchars($pizza['image_url']) . '" alt="' . htmlspecialchars($pizza['post_title']) . '" width="350" height="200">
+                <div class="desc">' . htmlspecialchars($pizza['post_title']) . '</div>
+                <div class="precio">Precio: 22 </div>
+              </div>';
+    }
+    echo '</div>';
+}
 
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-<div class="imagenes">
-  <a target="_blank" href="pizzas.php">
-    <img src="imagenes/images.jpg" alt="pizza1" width="350" height="200">
-  </a>
-  <div class="desc">DESCRIPCION DE LA OFERTA</div>
-</div>
-
-
-    </div>
-
-<?php
-include "pie.php"
+include "pie.php";
 ?>
