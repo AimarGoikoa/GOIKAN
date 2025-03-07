@@ -63,25 +63,25 @@ if (isset($_GET["page"])) {
 
         $direccion = $_POST['direccion'];
         if (empty($direccion)){ 
-        $errores['direccion'] = "no has introducido la dirección";}
+        $errores['direccion'] = "No has introducido la dirección";}
         else {$rdireccion = $direccion;}
 
         $tlfn =  trim($_POST['tlfn']);
         $tlfn = $_POST['tlfn'];
         if (empty($tlfn) || !is_numeric($tlfn)){ 
-        $errores['tlfn'] = "no has introducido el teléfono o no es numérico";}
+        $errores['tlfn'] = "No has introducido el teléfono o no es numérico";}
         else {$rtlfn = $tlfn;}
 
         $email =  trim($_POST['email']);
         $email = $_POST['email'];
         if (empty($email)){ 
-        $errores['email'] = "no has introducido el email";}
+        $errores['email'] = "No has introducido el email";}
         else {$remail = $email;}
 
         $mensaje =  trim($_POST['mensaje']);
         $mensaje = $_POST['mensaje'];
         if (empty($tlfn)){ 
-        $errores['mensaje'] = "no has introducido el mensaje a enviar";}
+        $errores['mensaje'] = "No has introducido el mensaje a enviar";}
         else {$rmensaje = $mensaje;}
 
         # INSERCION
