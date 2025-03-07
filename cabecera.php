@@ -9,7 +9,8 @@ if (session_status() === PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <title>Goikan</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css?v=<?php echo time(); ?>">
+
 </head>
 <body>
 <header class="cabecera">
