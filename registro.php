@@ -190,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     a {
         text-decoration: none;
-        color: white;
+        color: green;
     }
     .log {
         display: flex;
