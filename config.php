@@ -90,7 +90,7 @@ include "cabecera.php";
 
     a {
         text-decoration: none;
-        color: white;
+        color: green;
     }
 
     .log {
