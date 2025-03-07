@@ -1,6 +1,6 @@
 <?php
 session_start(); // Manejo de sesión (carrito, login, etc.)
-$bdConexion = "localhost";
+$bdConexion = "localhost:3307";
 $username = "root";
 $passwd = "";
 $baseDatos = "bdgoikan";
