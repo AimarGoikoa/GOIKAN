@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     a {
         text-decoration: none;
-        color: white;
+        color: green;
     }
     .log {
         display: flex;
@@ -157,6 +157,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         color: red;
         margin-bottom: 10px;
     }
+    .btn a {
+    color: white;  /* Hace que el texto del enlace dentro del botón sea blanco */
+    display: block; /* Asegura que el enlace ocupe todo el botón */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none; /* Evita subrayado */
+}
+
+.btn a:hover {
+    color: black; /* Mantiene el efecto hover */
+}
 </style>
 
 <div class="container">
