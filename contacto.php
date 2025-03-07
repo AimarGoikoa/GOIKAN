@@ -108,55 +108,79 @@ include "cabecera.php";
         width: auto;
         height: auto;
     }
+
+    .error {
+        color: red;    
+    }
+
 </style>
 
 <div class="container">
     <div class="image-section">
-        <p><img src="./imagenes/localDenda.jpg" alt="imagen local">
+        <p>
+            <img src="./imagenes/localDenda.jpg" alt="imagen local">
             <img src="./imagenes/local.jpg" alt="imagen pizza">
             <img src="./imagenes/pizzaHorno3.jpg" alt="imagen pizza">
         </p>
     </div>
+
     <div class="form-section">
         <h2>Contáctanos</h2>
-        <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" name="nombre" placeholder="Nombre completo">
-        </div><br />
-        <div class="form-group">
-            <label for="direccion">Dirección</label>
-            <input type="text" name="direccion" placeholder="Dirección">
-        </div><br />
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" name="nombre" placeholder="Nombre completo">
+                <span class="error">
+                    <?php if (isset($errores['nombre'])) echo $errores['nombre']; ?>
+                </span>
+            </div><br />
 
-        <div class="form-group">
-            <label for="tlfn">Teléfono</label>
-            <input type="text" name="tlfn" placeholder="Teléfono de contacto">
-            
-        </div><br />
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" placeholder="Dirección">
+                <span class="error">
+                    <?php if (isset($errores['direccion'])) echo $errores['direccion']; ?>
+                </span>
+            </div><br />
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" placeholder="ejemplo@gmail.com">
-        </div><br />
+            <div class="form-group">
+                <label for="tlfn">Teléfono</label>
+                <input type="text" name="tlfn" placeholder="Teléfono de contacto">
+                <span class="error">
+                    <?php if (isset($errores['tlfn'])) echo $errores['tlfn']; ?>
+                </span>
+            </div><br />
 
-        <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" rows="10" cols="30"></textarea>
-        </div><br />
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="ejemplo@gmail.com">
+                <span class="error">
+                    <?php if (isset($errores['email'])) echo $errores['email']; ?>
+                </span>
+            </div><br />
 
-        <input class="btn" type="submit" name="enviar" value="Enviar"><br /><br />
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" rows="10" cols="30"></textarea>
+                <span class="error">
+                    <?php if (isset($errores['mensaje'])) echo $errores['mensaje']; ?>
+                </span>
+            </div><br />
+
+            <input class="btn" type="submit" name="enviar" value="Enviar"><br /><br />
+        </form>
+        
         <br />
         <div class="log">
             <a href="index.php"><img src="imagenes/goikan logo.png"></a>
         </div>
     </div>
+
     <div class="image-section">
         <p>
-
             <img src="./imagenes/pizzaHorno.jpg" alt="imagen pizza">
             <img src="./imagenes/pizzaLibre.jpg" alt="imagen pizza">
             <img src="./imagenes/pizza.jpg" alt="imagen pizza">
-
         </p>
     </div>
 </div>
